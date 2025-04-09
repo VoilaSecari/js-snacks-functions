@@ -2,12 +2,18 @@
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
-
 // Dichiara la funzione qui.
+const filterByInitial = (list, filterChar) => {
+  const filteredList = [];
+  for (const currentElement of list) {
+    const firstChar = currentElement[0];
 
+    if (firstChar === filterChar) filteredList.push(currentElement);
+  }
+  return filteredList;
+};
 
 // Invoca la funzione qui e stampa il risultato in console
-
-
+console.log(filterByInitial(names, "A"));
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
